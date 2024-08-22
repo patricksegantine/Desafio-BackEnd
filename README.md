@@ -27,13 +27,13 @@ Seu objetivo é criar uma aplicação para gerenciar aluguel de motos e entregad
 - Eu como usuário admin quero modificar uma moto alterando apenas sua placa que foi cadastrado indevidamente
 - Eu como usuário admin quero remover uma moto que foi cadastrado incorretamente, desde que não tenha registro de locações.
 - Eu como usuário entregador quero me cadastrar na plataforma para alugar motos.
-    - Os dados do entregador são( identificador, nome, cnpj, data de nascimento, número da CNHh, tipo da CNH, imagemCNH)
+    - Os dados do entregador são (identificador, nome, cnpj, data de nascimento, número da CNHh, tipo da CNH, imagemCNH)
     - Os tipos de cnh válidos são A, B ou ambas A+B.
     - O cnpj é único e não pode se repetir.
     - O número da CNH é único e não pode se repetir.
 - Eu como entregador quero enviar a foto de minha cnh para atualizar meu cadastro.
     - O formato do arquivo deve ser png ou bmp.
-    - A foto não poderá ser armazenada no banco de dados, você pode utilizar um serviço de storage( disco local, amazon s3, minIO ou outros).
+    - A foto não poderá ser armazenada no banco de dados, você pode utilizar um serviço de storage (disco local, amazon s3, minIO ou outros).
 - Eu como entregador quero alugar uma moto por um período.
     - Os planos disponíveis para locação são:
         - 7 dias com um custo de R$30,00 por dia
@@ -42,10 +42,10 @@ Seu objetivo é criar uma aplicação para gerenciar aluguel de motos e entregad
         - 45 dias com um custo de R$20,00 por dia
         - 50 dias com um custo de R$18,00 por dia
     - A locação obrigatóriamente tem que ter uma data de inicio e uma data de término e outra data de previsão de término.
-    - O inicio da locação obrigatóriamente é o primeiro dia após a data de criação.
+    - O início da locação obrigatóriamente é o primeiro dia após a data de criação do contrato de locação.
     - Somente entregadores habilitados na categoria A podem efetuar uma locação
 - Eu como entregador quero informar a data que irei devolver a moto e consultar o valor total da locação.
-    - Quando a data informada for inferior a data prevista do término, será cobrado o valor das diárias e uma multa adicional
+    - Quando a data informada for inferior a data prevista do término, será cobrado o valor das diárias efetivadas e uma multa adicional
         - Para plano de 7 dias o valor da multa é de 20% sobre o valor das diárias não efetivadas.
         - Para plano de 15 dias o valor da multa é de 40% sobre o valor das diárias não efetivadas.
     - Quando a data informada for superior a data prevista do término, será cobrado um valor adicional de R$50,00 por diária adicional.
